@@ -247,7 +247,7 @@ void * start_loop (void *arg)
 	//ioctl(fpc, FRONTPANELSCROLLMODE, &scrollMode);
 
 	// display string
-	char str[] = "OV";
+	char str[] = "OpenVision";
 	int length = strlen(str);
 	char dispData[MAX_CHARS + 1];
 	int offset = 0;
@@ -319,7 +319,7 @@ void * start_loop (void *arg)
 {
 	evfd vfd;
 	blocked = true;
-	char str[] = "OV";
+	char str[] = "OpenVision";
 	int vfddev = open ("/dev/vfd", O_WRONLY);
 	write(vfddev, str, strlen(str));
 	close(vfddev);
