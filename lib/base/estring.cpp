@@ -633,14 +633,14 @@ std::string convertDVBUTF8(const unsigned char *data, int len, int table, int ts
 	if (pconvertedLen)
 		*pconvertedLen = convertedLen;
 
-	if (convertedLen < len)
-		eLog(6, "[convertDVBUTF8] %d chars converted, and %d chars left..", convertedLen, len-convertedLen);
-	eLog(6, "[convertDVBUTF8] table=0x%02X twochar=%d output:%s\n", table, useTwoCharMapping, output.c_str());
+//	if (convertedLen < len)
+//		eLog(6, "[convertDVBUTF8] %d chars converted, and %d chars left..", convertedLen, len-convertedLen);
+//	eLog(6, "[convertDVBUTF8] table=0x%02X twochar=%d output:%s\n", table, useTwoCharMapping, output.c_str());
 
-	eLog(6, "[convertDVBUTF8] table=0x%02X tsid:onid=0x%X:0x%X data[0..14]=%s   output:%s\n",
-		table, (unsigned int)tsidonid >> 16, tsidonid & 0xFFFFU,
-		string_to_hex(std::string((char*)data, len < 15 ? len : 15)).c_str(),
-		output.c_str());
+//	eLog(6, "[convertDVBUTF8] table=0x%02X tsid:onid=0x%X:0x%X data[0..14]=%s   output:%s\n",
+//		table, (unsigned int)tsidonid >> 16, tsidonid & 0xFFFFU,
+//		string_to_hex(std::string((char*)data, len < 15 ? len : 15)).c_str(),
+//		output.c_str());
 
 	return output;
 }
@@ -930,9 +930,9 @@ std::string string_to_hex(const std::string& input)
 
 std::string strip_non_graph(std::string s)
 {
-	s = std::regex_replace(s, std::regex("[[^:graph:]]"), " ");
-	s = std::regex_replace(s, std::regex("\\s{2,}"), " ");
-	s = std::regex_replace(s, std::regex("^\\s+|\\s+$"), "");
+//	s = std::regex_replace(s, std::regex("[[^:graph:]]"), " ");
+//	s = std::regex_replace(s, std::regex("\\s{2,}"), " ");
+//	s = std::regex_replace(s, std::regex("^\\s+|\\s+$"), "");
 	return s;
 }
 
