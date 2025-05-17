@@ -20,23 +20,23 @@ struct ca_pid {
 #define CA_SET_PID _IOW('o', 135, struct ca_pid)
 #endif
 
-enum ca_descr_data_type {
-	CA_DATA_IV,
-	CA_DATA_KEY,
-};
+//enum ca_descr_data_type {
+//	CA_DATA_IV,
+//	CA_DATA_KEY,
+//};
 
-enum ca_descr_parity {
-	CA_PARITY_EVEN,
-	CA_PARITY_ODD,
-};
+//enum ca_descr_parity {
+//	CA_PARITY_EVEN,
+//	CA_PARITY_ODD,
+//};
 
-struct ca_descr_data {
-	unsigned int index;
-	enum ca_descr_parity parity;
-	enum ca_descr_data_type data_type;
-	unsigned int length;
-	unsigned char *data;
-};
+//struct ca_descr_data {
+//	unsigned int index;
+//	enum ca_descr_parity parity;
+//	enum ca_descr_data_type data_type;
+//	unsigned int length;
+//	unsigned char *data;
+//};
 
 
 #ifdef OLD   
